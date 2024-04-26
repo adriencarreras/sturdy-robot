@@ -1,0 +1,67 @@
+:root{
+    --clr: orangered;
+}
+
+body{
+    background: #bbc7ce;
+    min-height: 100vh;
+
+
+
+}
+
+button{
+    padding: 1.5em 2.5em;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+
+    font-family: arial;
+
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+
+    margin: 1rem;
+}
+
+.hover-btn span{
+    position: relative;
+    z-index: 1;
+    transition: all 200ms;
+}
+
+.hover-btn::before{
+    content: "";
+    position: absolute;
+    left: var(--xPos);
+    top: var(--yPos);
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%, -50%);
+    background: orangered;
+    border-radius: 50%;
+    
+    transition: all 200ms;
+}
+
+.hover-btn:hover::before{
+    width: 400px;
+    height: 400px;
+}
+
+.hover-btn:hover span{
+    color: white;
+}
+
+
+
+.click-btn:hover{
+    background: var(--clr);
+}
